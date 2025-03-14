@@ -1,36 +1,36 @@
 ![Banner](./assets/banner.png)
 
-# Lab 2: Designing the Data Map
+# Lab 15: Data Security Overview
 
 ## Task 1: Consider the Design
 
-> Microsoft Purview Solution: Data Map
+> Microsoft Purview Solution: Data Classification
 
 **⏰ Duration:** 30 minutes
 
 **🎯 Outcome:** At the end of this task, you will have answered important questions that will form part of the structure of the workshop and help to focus the session.
 
-**🫂 Team Activity:** [30 minutes] Together as a group, revisit the questions posed at the start of Lab 1, adding a little detail around each answer to guide you in the following exercises.
+**🫂 Team Activity:** [30 minutes] Together as a group, revisit the questions posed at the start of Lab 15, adding a little detail around each answer to guide you in the following exercises.
 
-- Are you interested in Purview's Security, Privacy, and Compliance capabilities too, or just Purview Data Governance over structured data?
-- Have you got the respective Microsoft 365 Enterprise license to test out the Security/Privacy/Compliance features?
+- Are you looking to standarized data classification and protection capabilities on Microsoft 365 workloads?
+- Have you got the respective Microsoft 365 Enterprise license to test out the Data Security capabilities?
 - Do you have M365 - E3/E5 Data Security policies in place already (Information Protection, Insider Risk Management, Information Barriers etc)?
-- Are there any on-premises services that need to be considered/evaluated as part of the Purview Data Governance / cataloging initiative?
-- Given data governance is interdisciplinary, have you considered use cases and identified stakeholders throughout the business?
-- Have you figured out how data governance costs will be apportioned?
+- Are there any other workloads that need to be considered/evaluated as part of the Purview Data Security initative? (On-Premises, SaaS apps, Fabric)
+- Given data security is interdisciplinary, have you considered use cases and identified stakeholders throughout the business?
+- Have you figured out how data security osts will be apportioned?
 - Have you planned your path to production?
 
 If you were unable to answer many of these questions, lets aim to get clarity at the end of the session/workshop - once capabilities become clearer to you.
 
-## Task 2: Create your Platform Domains
+## Task 2: Understand Data Classification options
 
-> Microsoft Purview Solution: Data Map
+> Microsoft Purview Solution: Data Classification
 
 **⏰ Duration:** 10 minutes
 
-**🎯 Outcome:** At the end of this task, you will have implemented a platform domain and will be able to divide your Purview Data Map based on environment, isolation, and security requirements.
+**🎯 Outcome:** At the end of this task, you will be able to understand the Data Classifications technologies on available on Purview. 
 
-### Understanding Platform Domains
+### Understanding Data Classification Techniques
 
 > Source: [Domains](https://learn.microsoft.com/purview/concept-domains)
 
