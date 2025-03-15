@@ -2,68 +2,63 @@
 
 # Lab 15: Data Security Overview
 
-## Task 1: Consider the Design
+## Task 1: Discuss Data Security Solutions
 
-> Microsoft Purview Solution: Data Classification
+> Microsoft Purview
 
-**⏰ Duration:** 30 minutes
+**⏰ Duration:** XX minutes
 
-**🎯 Outcome:** At the end of this task, you will have answered important questions that will form part of the structure of the workshop and help to focus the session.
+**🎯 Outcome:** At the end of this task, you will have a overview of the Purview Data Security solutions and objectives.
 
-**🫂 Team Activity:** [30 minutes] Together as a group, revisit the questions posed at the start of Lab 15, adding a little detail around each answer to guide you in the following exercises.
+**🫂 Team Activity:** [XX minutes] Together as a group, revisit the questions posed at the start of Lab 15, adding a little detail around each answer to guide you in the following exercises.
 
-- Are you looking to standarized data classification and protection capabilities on Microsoft 365 workloads?
 - Have you got the respective Microsoft 365 Enterprise license to test out the Data Security capabilities?
-- Do you have M365 - E3/E5 Data Security policies in place already (Information Protection, Insider Risk Management, Information Barriers etc)?
+- How familiar are you with the information protection framework: Know your data, Protect your data, Prevent Data Loss?
+- Have you already use Data Classification tecniques like Sensitive Info Types or Trainable Classifiers? How are they different?
+- Do you have M365 - E3/E5 Data Security policies in place already (Information Protection, Data Loss Prevention, Insider Risk Management, Information Barriers, etc)?
 - Are there any other workloads that need to be considered/evaluated as part of the Purview Data Security initative? (On-Premises, SaaS apps, Fabric)
-- Given data security is interdisciplinary, have you considered use cases and identified stakeholders throughout the business?
-- Have you figured out how data security osts will be apportioned?
-- Have you planned your path to production?
+- Have you mapped the desired data protection motivations and outcomes?
+- Have you planned your path to end user adoption?
 
 If you were unable to answer many of these questions, lets aim to get clarity at the end of the session/workshop - once capabilities become clearer to you.
 
-## Task 2: Understand Data Classification options
+Source: [Data Security Solutions](https://learn.microsoft.com/en-us/purview/purview-security)
 
-> Microsoft Purview Solution: Data Classification
+## Task 2: Discuss Adoption Approach
+
+> Microsoft Information Protection Framework
 
 **⏰ Duration:** 10 minutes
 
-**🎯 Outcome:** At the end of this task, you will be able to understand the Data Classifications technologies on available on Purview. 
+**🎯 Outcome:** At the end of this task, you will be able to understand the Information Protection Framework stages.
 
-### Understanding Data Classification Techniques
+### Understanding the framework
 
-> Source: [Domains](https://learn.microsoft.com/purview/concept-domains)
+> Source: [Microsoft Purview Information Protection Framework](https://learn.microsoft.com/en-us/purview/information-protection-solution)
 
-Microsoft Purview has introduced ['domains'](https://learn.microsoft.com/purview/concept-domains) (not to be confused with the [Governance Domains](https://learn.microsoft.com/purview/what-is-data-catalog#governance-domains) concept) as a structure within the Microsoft Purview Data Map. Domains are designed to distribute organizational responsibility, create logical separation, ensuring consistent management across assets and glossaries.
+Purview Data Security solutions are deeply integrated and work together to provide a solution for different use cases. Information Protection and Data Loss Prevention use a three-phased approach to rollout the solution: Know your data, Protect your data and Prevent data loss. Each stage uses a combination o features to achieve their goals.
 
-One of the most significant changes in the new experience is the replacement of multiple data governance accounts within a tenant (the classic Azure Purview approach) with multiple domains under an default Purview account for that tenant.
+![Alt text of the image](https://learn.microsoft.com/en-us/purview/media/mip-solution-overview-extended.png)
 
-**Key Facts:**
+### Know your data
 
-- Every Microsoft Purview Data Map starts with a [default domain](https://learn.microsoft.com/purview/concept-domains#default-domain). This domain is the primary account's root collection when an account is upgraded to the new experience.</br>
-  - Up to 4 additional custom domains can be created for better organization and governance.</br>
-- A new role, the [Domain Admin](<https://learn.microsoft.com/purview/governance-roles-permissions#domain-and-collection-permissions:~:text=roles%20are%20currently%3A-,Domain%20admin,-(domain%20level)>), can be assigned. They will have the ability to assign permissions within that domain and manage its resources.
-- You will be able to [merge](https://learn.microsoft.com/purview/merge-domain?source=docs) exiting (classic) Azure Purview accounts within your tenant into the new Microsoft Purview experience using domains.
+> Source: [Know your data](https://learn.microsoft.com/en-us/purview/information-protection-solution?tabs=phase-one#know-your-data)
 
-![A tenant contains multiple domains, each domain enclosing collections and glossaries](./assets/tenant-with-domains.png)
+Purview Information Protection data classification helps you to discover and classify data in the organizaion. There are three main There are different data classification technologies, however the most common are:
 
-- Each Data Map has 1-5 Domains. Each Domain can have up to [256 collections](https://learn.microsoft.com/purview/concept-best-practices-collections#:~:text=A%20collections%20hierarchy%20in%20a%20Microsoft%20Purview%20can%20support%20as%20many%20as%20256%20collections%2C%20with%20a%20maximum%20of%20eight%20levels%20of%20depth.), with a maximum of eight levels of nested depth.
-
-### Understanding Collections inside Domains
-
-> Source: [Manage Domains and Collections](https://learn.microsoft.com/en-us/purview/how-to-create-and-manage-domains-collections)
-
-In the context of Microsoft Purview, collections are a way to organize resources like data sources, scans, and assets within a domain. Each domain (both default and custom) starts with one root collection and can contain multiple sub collections.
-
-![Creating a new Collection](./assets/creating-new-collection.png)
-
-**Key Characteristics:**
-
-- Hierarchical Structure: Collections form a tree structure (one-to-many), allowing you to organize your resources into a hierarchy with [access control boundaries](https://learn.microsoft.com/purview/how-to-create-and-manage-collections#add-roles-and-restrict-access-through-collections).
-- Role Assignments: Collections support role assignments, allowing you to manage access and permissions at a granular level. These roles could include Domain admins, Collection admins, Data curators, and [more](https://learn.microsoft.com/purview/how-to-create-and-manage-domains-collections#add-roles-and-restrict-access).
-- Resource Management: Resources (data sources, scans, assets) associated with a collection are automatically included when the collection is identified. Depending on the assigned permissions, these resources can be viewed, edited, or deleted.
-- Movement of Resources: Collections allow for movement of [registered](https://learn.microsoft.com/purview/how-to-create-and-manage-collections#register-source-to-a-collection) sources between them and also let you add assets.
-- Inheritance: In Purview, permissions are inherited automatically from the parent collection to its sub collections. This inheritance is enabled by default and can be [restricted/disabled](https://learn.microsoft.com/purview/how-to-create-and-manage-domains-collections#restrict-inheritance) as needed.
+**Sensitive Information Types (SITs)**
+- Pattern based classifiers: Detect sensitive information like bank account or credit card numbers.
+- More than 300 out-of-the-box SITs ready to be used.
+- Create new SITs using regular expressions, [keyword list/dictionary](https://learn.microsoft.com/en-us/purview/sit-create-a-keyword-dictionary) and [functions](https://learn.microsoft.com/en-us/purview/sit-functions).
+- Combine these elements to create accurate detections with different [confidence levels](https://learn.microsoft.com/en-us/purview/sit-sensitive-information-type-learn-about#more-on-confidence-levels), which are key for automatic labeling and data loss prevention.
+- SITs are used in
+-   DLP Policies - Rule conditions
+-   Sensitivity Labels - automatic-labeling
+-   Retention Labels - automatic-labeling
+-   Insider risk management - policies
+-   Communication Compliance - rule conditions
+-   Service-Side automatic-labeling
+-   Microsoft Priva 
 
 Remember, to manage collections, you need to be at least a Domain Admin or Collection Admin within the [Purview governance portal](https://learn.microsoft.com/purview/governance-roles-permissions#domain-and-collection-permissions).
 
