@@ -2,29 +2,30 @@
 
 # Lab 15: Data Security Overview
 
-## Task 1: Discuss Data Security Solutions
+## Task 1: Discuss about Data Security Solutions
 
 > Microsoft Purview
 
 **⏰ Duration:** XX minutes
 
-**🎯 Outcome:** At the end of this task, you will have a overview of the Purview Data Security solutions and objectives.
+**🎯 Outcome:** At the end of this task, you will have a overview of the Purview Data Security solutions and their capabilities
 
-**🫂 Team Activity:** [XX minutes] Together as a group, revisit the questions posed at the start of Lab 15, adding a little detail around each answer to guide you in the following exercises.
+**🫂 Team Activity:** [30 minutes] Together as a group discuss the following questions, adding a little detail around each answer to guide you in the following exercises.
 
-- Have you got the respective Microsoft 365 Enterprise license to test out the Data Security capabilities?
+- Have you clearly identified the data protection business requirements and desired outcomes? How does success look like?
+- Is main driver to be compliant with a regulatory requirement? What is the impact of not to comply?
+- Have you planned your adoption journey? What kind of executive sponsorship is available?
+- Have you gotten Microsoft 365 E3/E5 licenses to test out the Data Security platform?
 - How familiar are you with the information protection framework: Know your data, Protect your data, Prevent Data Loss?
-- Have you already use Data Classification tecniques like Sensitive Info Types or Trainable Classifiers? How are they different?
-- Do you have M365 - E3/E5 Data Security policies in place already (Information Protection, Data Loss Prevention, Insider Risk Management, Information Barriers, etc)?
-- Are there any other workloads that need to be considered/evaluated as part of the Purview Data Security initative? (On-Premises, SaaS apps, Fabric)
-- Have you mapped the desired data protection motivations and outcomes?
-- Have you planned your path to end user adoption?
+- Have you already using Data Classification tecniques like Sensitive Info Types or Trainable Classifiers? How are they different?
+- Do you have Purview Data Security policies already in place (Information Protection, Data Loss Prevention, Insider Risk Management, Information Barriers, etc)?
+- Besides Microsoft 365, are there any other workloads that need to be included as part of the Purview Data Security deployment? (On-Premises, SaaS apps, Fabric, Data Map)
 
 If you were unable to answer many of these questions, lets aim to get clarity at the end of the session/workshop - once capabilities become clearer to you.
 
 Source: [Data Security Solutions](https://learn.microsoft.com/en-us/purview/purview-security)
 
-## Task 2: Discuss Adoption Approach
+## Task 2: Discuss Implementation Framework
 
 > Microsoft Information Protection Framework
 
@@ -36,15 +37,15 @@ Source: [Data Security Solutions](https://learn.microsoft.com/en-us/purview/purv
 
 > Source: [Microsoft Purview Information Protection Framework](https://learn.microsoft.com/en-us/purview/information-protection-solution)
 
-Purview Data Security solutions are deeply integrated and work together to provide a solution for different use cases. Information Protection and Data Loss Prevention use a three-phased approach to rollout the solution: Know your data, Protect your data and Prevent data loss. Each stage uses a combination o features to achieve their goals.
+Purview Data Security solutions are work together to provide a comprehensive classification and protection capabilities. Information Protection and Data Loss Prevention use a three-phased approach to rollout data security: Know your data, Protect your data and Prevent data loss. Each stage uses a combination or features of each solution to meet the defined use cases.
 
-![Alt text of the image](https://learn.microsoft.com/en-us/purview/media/mip-solution-overview-extended.png)
+![Information Protection Framework](https://learn.microsoft.com/en-us/purview/media/mip-solution-overview-extended.png)
 
 ### Know your data
 
 > Source: [Know your data](https://learn.microsoft.com/en-us/purview/information-protection-solution?tabs=phase-one#know-your-data)
 
-Purview Information Protection data classification helps you to discover and classify data in the organizaion. There are three main There are different data classification technologies, however the most common are:
+Purview Information Protection data classification helps you to discover and classify data in the organizaion. There are different data classification technologies in Microsoft Purview, however the most common are: Sensitive Info Types and Trainable Classifiers.
 
 **Sensitive Information Types (SITs)**
 - Pattern based classifiers: Detect sensitive information like bank account or credit card numbers.
@@ -60,7 +61,12 @@ Purview Information Protection data classification helps you to discover and cla
 -   Service-Side automatic-labeling
 -   Microsoft Priva 
 
-Remember, to manage collections, you need to be at least a Domain Admin or Collection Admin within the [Purview governance portal](https://learn.microsoft.com/purview/governance-roles-permissions#domain-and-collection-permissions).
+### Protect your data
+
+> Source: [Protect your data](https://learn.microsoft.com/en-us/purview/information-protection-solution?tabs=phase-one#protect-your-data)
+
+[Sensitivity Labels](https://learn.microsoft.com/en-us/purview/sensitivity-labels) from Microsoft Purview Information Protection allow you to classify and protect your organization's data by applying labels that enforce protection settings like encryption and content markings. Sensitivity Labels are used across Microsoft solutions.
+
 
 ### Exercise: Create Domains and Collections
 
